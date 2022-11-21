@@ -1,8 +1,8 @@
 // import files
-const add = require("../calculator/add").default;
-const subtract = require("../calculator/subtract").default;
+const add = require("../calculator/add");
+const subtract = require("../calculator/subtract");
 const multiply = require("../calculator/multiply").default;
-const divide = require("../calculator/divide").default;
+const divide = require("../calculator/divide");
 
 // Test Case 1 (Addition)
 test("Should add two numbers", () => {

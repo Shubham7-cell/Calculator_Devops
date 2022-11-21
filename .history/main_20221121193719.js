@@ -1,5 +1,4 @@
 // import files
-console.log("hhhhhh");
 import add from "./calculator/add";
 import subtract from "./calculator/subtract";
 import multiply from "./calculator/multiply";
@@ -20,7 +19,6 @@ function calculate() {
     switch (operator) {
       case "add":
         result = add(firstNum, secondNum);
-        console.log(result);
         break;
       case "subtract":
         result = subtract(firstNum, secondNum);

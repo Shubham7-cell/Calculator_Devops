@@ -5,4 +5,4 @@ function add(firstNum, secondNum) {
   return firstNum + secondNum;
 }
 
-export default add;
+module.exports = add;

@@ -1,9 +1,9 @@
+import "./style.css";
 // import files
-console.log("hhhhhh");
-import add from "./calculator/add";
-import subtract from "./calculator/subtract";
-import multiply from "./calculator/multiply";
-import divide from "./calculator/divide";
+var add = require("./calculator/add");
+var subtract = require("./calculator/subtract");
+var multiply = require("./calculator/multiply").default;
+var divide = require("./calculator/divide");
 
 window.onload = function () {
   document.getElementById("calculateBtn").addEventListener("click", calculate);
@@ -20,7 +20,6 @@ function calculate() {
     switch (operator) {
       case "add":
         result = add(firstNum, secondNum);
-        console.log(result);
         break;
       case "subtract":
         result = subtract(firstNum, secondNum);

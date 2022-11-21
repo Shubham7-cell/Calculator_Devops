@@ -1,9 +1,9 @@
+import "./style.css";
 // import files
-console.log("hhhhhh");
-import add from "./calculator/add";
-import subtract from "./calculator/subtract";
-import multiply from "./calculator/multiply";
-import divide from "./calculator/divide";
+var add = require("./calculator/add");
+var subtract = require("./calculator/subtract");
+var multiply = require("./calculator/multiply");
+var divide = require("./calculator/divide");
 
 window.onload = function () {
   document.getElementById("calculateBtn").addEventListener("click", calculate);
@@ -14,13 +14,13 @@ function calculate() {
   var secondNum = parseInt(document.getElementById("secondnumber").value);
   var operator = document.getElementById("operator").value;
   var resultElm = document.getElementById("result");
+
   var result;
 
   try {
     switch (operator) {
       case "add":
         result = add(firstNum, secondNum);
-        console.log(result);
         break;
       case "subtract":
         result = subtract(firstNum, secondNum);
@@ -35,7 +35,8 @@ function calculate() {
         alert("Error!");
         break;
     }
-    resultElm.textContent = "Result: " + result;
+    console.log(result);
+    resultElm.innerHTML += `<p>${firstNum} ${operator} ${secondNum} = ${result}</p>`;
     resultElm.style.color = "black";
   } catch (error) {
     resultElm.textContent = "Error: " + error.message;

@@ -1,8 +1,8 @@
 // import files
-const add = require("../calculator/add").default;
-const subtract = require("../calculator/subtract").default;
-const multiply = require("../calculator/multiply").default;
-const divide = require("../calculator/divide").default;
+const add = require("../calculator/add");
+//import add from "./calculator/add";
+//import add from "./calculator/add";
+//import add from "./calculator/add";
 
 // Test Case 1 (Addition)
 test("Should add two numbers", () => {
@@ -11,15 +11,15 @@ test("Should add two numbers", () => {
 
 // Test Case 2 (Subtraction)
 test("Should Subtract one number from another", () => {
-  expect(subtract(25, 10)).toBe(15);
+  expect(add(25, 10)).toBe(15);
 });
 
 // Test Case 3 (Multiplication)
 test("Should multiply two numbers", () => {
-  expect(multiply(25, 10)).toBe(250);
+  expect(add(25, 10)).toBe(250);
 });
 
 // Test Case 4 (Division)
 test("Should divide one number by another", () => {
-  expect(divide(20, 10)).toBe(2);
+  expect(add(20, 10)).toBe(2);
 });
